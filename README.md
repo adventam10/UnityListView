@@ -67,8 +67,6 @@
 
 1. 画面サイズが変わった場合にセル数がおかしくなる  
 `ScrollView` の高さとセルの高さから必要なセル数を計算する処理を画面サイズ変更時にもやる必要がある？
-1. セルの高さを `ScrollView` 上と Prefab 化したセルの二箇所で行う必要がある（しないとサイズが合わない）  
-   <img width="130" alt="cell2" src="https://user-images.githubusercontent.com/34936885/119059089-978d6f00-ba0a-11eb-9a5e-3499011b2bc1.png">
 1. 上下に無限にスクロールできてしまう  
     <img width="130" alt="cell_height" src="https://user-images.githubusercontent.com/34936885/119059223-d7eced00-ba0a-11eb-8180-7520f792ee71.gif">
 1. 指定の位置にコードでスクロールしたい 

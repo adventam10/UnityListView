@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class ListViewHandler : MonoBehaviour, ListViewDataSource
 {
-    private List<int> _dataList = new List<int>();
+    [SerializeField]
     private ListView _listView;
+    private List<int> _dataList = new List<int>();
 
     void Start()
     {
@@ -14,8 +15,6 @@ public class ListViewHandler : MonoBehaviour, ListViewDataSource
             _dataList.Add(i);
         }
 
-        GameObject resultObj = GameObject.Find("ListView");
-        _listView = resultObj.GetComponent<ListView> ();
         _listView.dataSource = this;
         _listView.selector = delegate (int index) {
              Debug.Log("テーブルデリゲート: " + index);
